@@ -1,0 +1,9 @@
+<form action="/convert/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+{% if convertedPage %}
+	<br>
+    <b>Converted base2 value is: {{ base2 }}</b>
+{% endif %}
+</form>
